@@ -13,8 +13,8 @@ SENDER_PASSWORD = os.environ['SENDER_PASSWORD']
 # List of recipients
 RECIPIENTS = [
     "abrahamalex9684@gmail.com",
-    "harriswellington61@gmail.com",
-    "saniabubakarsani2018@gmail.com"
+   # "harriswellington61@gmail.com",
+   # "saniabubakarsani2018@gmail.com"
 ]
 
 # File paths
