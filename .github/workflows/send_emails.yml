@@ -1,11 +1,12 @@
-name: Update Index and Send Email Daily
+name: Send Daily Email
 
 on:
   schedule:
-    - cron: '40 12 * * *'
+    - cron: '45 12 * * *'  # This is 6:00 PM IST
+  workflow_dispatch:  # Allows manual triggering for testing
 
 jobs:
-  update_and_send_email:
+  send_email:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v2
       with:
         python-version: '3.x'
 
@@ -21,11 +22,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
-    - name: Run the script
-      run: python reminder.py
+    - name: Run script
       env:
-        EMAIL_USER: ${{ secrets.EMAIL_USER }}
-        EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        EMAIL_USER: ${{ secrets.SENDER_EMAIL }}
+        EMAIL_PASS: ${{ secrets.SENDER_PASSWORD }}
+      run: python reminder.py
 
     - name: Configure Git
       run: |
