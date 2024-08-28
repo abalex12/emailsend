@@ -2,7 +2,7 @@ name: Send Daily Email
 
 on:
   schedule:
-    - cron: '53 18 * * *'  # This is 6:00 PM IST
+    - cron: '36 19 */2 * *'  # This is 6:00 PM IST
   workflow_dispatch:  # Allows manual triggering for testing
 
 jobs:
