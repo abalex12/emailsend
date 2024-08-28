@@ -21,7 +21,7 @@ def send_email(recipient, message):
     msg = MIMEMultipart()
     msg['From'] = SENDER_EMAIL
     msg['To'] = recipient
-    msg['Subject'] = "Water Cooler Duty Reminder"
+    msg['Subject'] = "Reminder: Time to Refill the Room Cooler with Water"
     
     msg.attach(MIMEText(message, 'plain'))
     
