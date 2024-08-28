@@ -28,6 +28,9 @@ jobs:
       env:
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+        EMAIL1: ${{ secrets.EMAIL1 }}
+        EMAIL2: ${{ secrets.EMAIL2 }}
+        EMAIL3: ${{ secrets.EMAIL3 }}
       run: python reminder.py
 
     - name: Configure Git
