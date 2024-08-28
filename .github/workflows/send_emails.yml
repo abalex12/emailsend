@@ -1,7 +1,9 @@
 name: Send Daily Email
 on:
   schedule:
-    - cron: '20 12 * * *'  # This is 6:00 PM IST
+    - cron: '20 12 * * *'  
+  workflow_dispatch:  # Allows manual triggering for testing
+
 jobs:
   send_email:
     runs-on: ubuntu-latest
