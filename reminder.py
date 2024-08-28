@@ -10,9 +10,9 @@ SENDER_EMAIL = os.environ['SENDER_EMAIL']
 SENDER_PASSWORD = os.environ['SENDER_PASSWORD']
 # List of recipients
 RECIPIENTS = [
-    "abrahamalex9684@gmail.com",
-    "harriswellington61@gmail.com",
-    "saniabubakarsani2018@gmail.com"
+    os.environ['EMAIL1'],
+    os.environ['EMAIL2'],
+    os.environ['EMAIL3']
 ]
 
 def send_email(recipient, message):
