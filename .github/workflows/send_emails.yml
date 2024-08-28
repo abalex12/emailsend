@@ -1,7 +1,7 @@
 name: Send Daily Email
 on:
   schedule:
-    - cron: '5 12 * * *'  # This is 5:35 PM IST
+    - cron: '20 12 * * *'  # This is 6:00 PM IST
 jobs:
   send_email:
     runs-on: ubuntu-latest
